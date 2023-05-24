@@ -23,9 +23,9 @@ html {
   background-color: vars.$bg-color;
 }
 
-p {
-  margin: 0 0 10px;
-}
+// p {
+//   margin: 0 0 10px;
+// }
 
 p + p,
 p + ul,
@@ -44,7 +44,7 @@ ol + p {
 
 a {
   outline: none;
-  color: vars.$main-color;
+  color: #cd0030;
 }
 
 iframe {
