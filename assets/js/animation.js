@@ -20,7 +20,7 @@ const getBlocks = (className) => {
 const prospectsItem = [
   ...getBlocks(".home_prospects_item_prospects_item"),
   ...getBlocks(".home_prospects_item_title"),
-  ...getBlocks(".page_content_inner_content_item"),
+  // ...getBlocks(".page_content_inner_content_item"),
 ];
 
 const AnimateBlocks = (e) => {
