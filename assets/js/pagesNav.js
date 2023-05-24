@@ -29,18 +29,16 @@ nav.forEach((navItem) => {
 
     //close mobile menu
     const currentStatusDropdown = PBurger.dataset.active;
-    console.log(currentStatusDropdown);
 
     switch (currentStatusDropdown) {
       case "true":
-        console.log(1);
         PHeader.classList.remove("active");
         PHeader_nav.classList.remove("active");
         PBurger.classList.remove("active");
         PBurger.dataset.active = false;
         break;
       default:
-        console.log(2);
+        break;
     }
 
     //close dropdown menu

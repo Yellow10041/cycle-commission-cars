@@ -13,9 +13,17 @@ ScrollSmoother.create({
 });
 
 //Appearance of elements
-const blocksAnimate = document.querySelectorAll(".blockAnimate");
+const getBlocks = (className) => {
+  return document.querySelectorAll(`${className}`);
+};
 
-blocksAnimate.forEach((e) => {
+const prospectsItem = [
+  ...getBlocks(".home_prospects_item_prospects_item"),
+  ...getBlocks(".home_prospects_item_title"),
+  ...getBlocks(".page_content_inner_content_item"),
+];
+
+const AnimateBlocks = (e) => {
   gsap.fromTo(
     e,
     {
@@ -32,10 +40,14 @@ blocksAnimate.forEach((e) => {
       scrollTrigger: {
         trigger: e,
         start: "top bottom",
-        end: "bottom center",
+        end: "top center",
         scrub: 1,
         // markers: true,
       },
     }
   );
+};
+
+prospectsItem.forEach((e) => {
+  AnimateBlocks(e);
 });
